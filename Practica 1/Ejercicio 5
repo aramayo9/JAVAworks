@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		Scanner calificacion=new Scanner(System.in);
+		
+		System.out.println("Ingrese nota del examen: "); //pedimos al usuario su nota del examen
+		int nota=calificacion.nextInt();
+		
+		int[] notas= {6, 7, 8, 9, 10}; //colocamos en una variable las notas que indican un aprobado
+		
+		boolean aprobado=false; //declaramos una variable booleana para un uso posterior
+		
+		for(int nota_aprob:notas) //aqui recorremos la variable notas 
+		{	
+			if(nota==nota_aprob) //condicion para saber si el examen esta aprobado o no
+			{
+				aprobado=true; //si se cumple, asignamos a aprobado como verdad 
+				break;
+			}
+		}
+			
+		if(aprobado) //si aprobado es verdadero, se imprimira el siguiente mensaje
+		{
+			System.out.println("Usted esta aprobado");
+		}
+		else //sino es asi, se imprimira este mensaje
+		{
+			System.out.println("Usted reprobo :( . Suerte la proxima vez");
+		}
+	}
+}
