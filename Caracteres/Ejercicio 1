@@ -1,0 +1,21 @@
+package Carac;
+import java.util.Scanner;
+
+public class Nombre {
+
+	public static void main(String[] args) {
+	
+		Scanner scanner=new Scanner(System.in);
+		String nombre;
+		String apellido;
+		
+		System.out.print("Ingrese su nombre porfavor: ");
+		nombre=scanner.next();
+		apellido=scanner.next();
+		
+		System.out.println("Su nombre es " + nombre + apellido);
+		
+		scanner.close();
+	}
+
+}
