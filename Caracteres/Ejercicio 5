@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Largerchain {
+	public static void main(String[] args) {
+		
+		Scanner scanner=new Scanner(System.in);
+		String palabra="";
+		int max=0;
+		String larger="";
+		
+		for(int i=0; i<5 ; i++)
+		{
+			System.out.print("Ingrese una palabra: ");
+			palabra=scanner.next();
+			
+			if(palabra.length()>max)
+			{
+				max=palabra.length();
+				larger=palabra;
+			}
+		}
+		System.out.print("La palabra " + larger + " tiene " + max + " letras, es la cadena mas larga");
+		scanner.close();
+	}
+	
+}
