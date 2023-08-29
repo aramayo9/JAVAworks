@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Remplazo {
+	public static void main(String[] args) {
+		
+		Scanner scanner=new Scanner(System.in);
+
+		String palabra;
+		String caracter;
+		
+		System.out.println("Ingrese una palabra: ");
+		palabra=scanner.nextLine();
+		
+		StringBuilder sb = new StringBuilder(palabra);
+		 
+		for(int i=0 ; i<palabra.length() ; i++)
+		{
+			System.out.print("\nIngrese un caracter: ");
+			caracter=scanner.nextLine();
+			char letra=caracter.charAt(0);
+			
+			sb.setCharAt(i, letra);
+			palabra = sb.toString();
+			System.out.println("Proceso de la palabra: " + palabra);
+		}
+		System.out.println("\nLa palabra inicialmente ingresada fue reemplazada por " + palabra);
+		scanner.close();
+	}
+
+}
