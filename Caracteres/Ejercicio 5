@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Anagrama {
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		String palabra;
+		String palabra2;
+		int z=0;
+		
+		System.out.println("Ingrese una palabra: ");
+		palabra=scan.nextLine();
+		
+		do {
+		System.out.println("Ingrese otra palabra con la misma longitud que la primera: ");
+		palabra2=scan.nextLine();
+		}while(palabra.length()!=palabra2.length());
+		
+		for(int i=0 ; i<palabra.length() ; i++)
+		{
+			for(int y=0 ; y<palabra.length() ; y++)
+			{
+				if(palabra.charAt(i)==palabra2.charAt(y))
+				{
+					z++;
+				}
+			}
+		}
+		
+		if(z==palabra.length())
+		{
+			System.out.println("La palabra " + palabra + " y la palabra " + palabra2 + " son anagramas");
+		}
+		else
+		{
+			System.out.println("La palabra " + palabra + " y la palabra " + palabra2 + " no son anagramas");
+		}
+		scan.close();
+	}
+
+}
